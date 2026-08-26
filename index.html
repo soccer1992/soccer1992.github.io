@@ -19,6 +19,12 @@
       
     </textarea>
     <button onclick="convert()">Convert!</button>
+    <button onclick="test()"> test redirect </button>
+<script>
+function test(){
+window.location.href = window.location.href + '/test123'
+}
+</script>
     <script>
       function convert(){
         console.log(rtfToHTML(```{\rtf1\ansi This is some \b bold\b0  and \i italic\i0  text.}```))
