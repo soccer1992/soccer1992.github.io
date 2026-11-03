@@ -4,8 +4,17 @@
   </head>
   <body>
     <div id="proxies">
-      <p id="scramjet">Scramjet: </p>
+      <p id="scramjet">Scramjet: Undetected</p>
       <br>
     </div>
+    <script>
+      function test(hname, element){
+        eval(`(${hname})=>document.getElementById(element.toLowerCase()).innerText+=" Attempted unobfuscated URL: " + location.href`)(a=>{
+          document.getElementById(element.toLowerCase()).innerText = element + ": Detected"
+          return a
+        })
+      }
+      test("$scramjet$wrap","Scramjet")
+    </script>
   </body>
 </html>
